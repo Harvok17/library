@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/library-book-pngrepo-com.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Library</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="book-entry">
+        <h2>Book Entry</h2>
+        <div class="book-input">
+          <label>Title: </label>
+          <input type="text" class="book-title" required />
+        </div>
+        <div class="book-input">
+          <label>Author: </label>
+          <input type="text" class="book-author" required />
+        </div>
+        <div class="book-input">
+          <label>Pages: </label>
+          <input type="number" class="book-pages" min="0" required />
+        </div>
+        <div class="book-input">
+          <label class="checkbox-container"
+            >Completed:
+            <input type="checkbox" class="book-read" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <button class="submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <header>
+      <pre>Note: Book entries are saved on browser's local storage</pre>
+      <h1>Personal Library</h1>
+      <button class="add-book">Add <i class="fas fa-book"></i></button></header>
+    
+
+    <div class="bookshelf"></div>
+    
+  </body>
+</html>

@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background: rgb(240, 238, 238);
+}
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #404040;
+}
+
+.form-container {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-container.open {
+  display: block;
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book-entry {
+  margin: auto;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px 30px;
+  background-color: #1d1d1d;
+  background-image: linear-gradient(
+    225deg,
+    #1d1d1d 0%,
+    #352446 50%,
+    #262b32 100%
+  );
+
+  color: rgb(238, 238, 238);
+}
+
+.book-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.book-input label {
+  font-weight: bold;
+}
+
+.book-input input {
+  color: rgb(238, 238, 238);
+  font-size: inherit;
+  font-family: inherit;
+  border: 0;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid rgb(238, 238, 238);
+  padding: 5px;
+}
+
+.submit {
+  padding: 5px 0;
+  font-family: inherit;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 15px;
+  border: 2px solid rgb(238, 238, 238);
+  background: transparent;
+  color: rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+.submit:hover{
+  background-color: rgb(238, 238, 238);
+  color: #1d1d1d;
+}
+
+.bookshelf {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 80%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(350px, 350px));
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.add-book {
+  font-size: 20px;
+  color: #404040;
+  border: 2px solid #404040;
+  padding: 9px 15px;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+.add-book:hover{
+  border-color: green;
+  background-color: green;
+  color: white;
+}
+
+/* Card */
+.book-card {
+  color: #404040;
+  background: #f2f2f2;
+  position: relative;
+  width: 350px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 7px 12px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 7px 12px 2px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+}
+
+.book-card.checked {
+  background-color: #1d1d1d;
+  background-image: linear-gradient(
+    225deg,
+    #1d1d1d 0%,
+    #352446 50%,
+    #262b32 100%
+  );
+
+  color: rgb(238, 238, 238);
+}
+
+.hero {
+  width: 100%;
+  height: 100px;
+  background-image: url("images/photo-1550399105-c4db5fb85c18.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.book-info {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Source Code Pro", monospace;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.book-info p {
+  margin-bottom: 15px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/* The container */
+.checkbox-container {
+  padding: 5px 0;
+  display: block;
+  width: 150px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 2.5px;
+  left: 140px;
+  height: 25px;
+  width: 25px;
+  background-color: #9f9f9f;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.delete {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  height: 45px;
+  width: 45px;
+  background: #ff4740;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  -webkit-box-shadow: 2px 5px 16px -3px rgba(0,0,0,0.78);
+-moz-box-shadow: 2px 5px 16px -3px rgba(0,0,0,0.78);
+box-shadow: 2px 5px 16px -3px rgba(0,0,0,0.78);
+}
+
+.delete i {
+  pointer-events: none;
+}
+
+.delete:hover {
+  background: #ff827d;
+}
