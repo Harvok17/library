@@ -25,13 +25,13 @@ body {
   font-family: "Poppins", sans-serif;
   background: rgb(240, 238, 238);
 }
-header{
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-footer{
+footer {
   margin-top: 50px;
   margin-bottom: 20px;
 }
@@ -135,7 +135,7 @@ h1 {
   cursor: pointer;
 }
 
-.submit:hover{
+.submit:hover {
   background-color: rgb(238, 238, 238);
   color: #1d1d1d;
 }
@@ -162,8 +162,7 @@ h1 {
   cursor: pointer;
 }
 
-
-.add-book:hover{
+.add-book:hover {
   border-color: green;
   background-color: green;
   color: white;
@@ -205,20 +204,29 @@ h1 {
 .book-info {
   margin-top: 20px;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 500;
   font-family: "Source Code Pro", monospace;
   text-align: left;
   padding: 0 10px;
 }
 
 .book-info p {
-  margin-bottom: 15px;
-  width: 100%;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+.heavy-text {
+  font-weight: 900;
+  margin-right: 10px;
+}
 
+.details {
+  display: flex;
+  flex-direction: column;
+}
 
 /* The container */
 .checkbox-container {
@@ -300,9 +308,9 @@ h1 {
   cursor: pointer;
   outline: none;
   font-size: 20px;
-  -webkit-box-shadow: 2px 5px 16px -3px rgba(0,0,0,0.78);
--moz-box-shadow: 2px 5px 16px -3px rgba(0,0,0,0.78);
-box-shadow: 2px 5px 16px -3px rgba(0,0,0,0.78);
+  -webkit-box-shadow: 2px 5px 16px -3px rgba(0, 0, 0, 0.78);
+  -moz-box-shadow: 2px 5px 16px -3px rgba(0, 0, 0, 0.78);
+  box-shadow: 2px 5px 16px -3px rgba(0, 0, 0, 0.78);
 }
 
 .delete i {

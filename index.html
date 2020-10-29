@@ -25,15 +25,15 @@
         <h2>Book Entry</h2>
         <div class="book-input">
           <label>Title: </label>
-          <input type="text" class="book-title" required />
+          <input type="text" class="book-title" maxlength="80" required />
         </div>
         <div class="book-input">
           <label>Author: </label>
-          <input type="text" class="book-author" required />
+          <input type="text" class="book-author" maxlength="80" required />
         </div>
         <div class="book-input">
           <label>Pages: </label>
-          <input type="number" class="book-pages" min="0" required />
+          <input type="number" class="book-pages" min="0" max="10000" required />
         </div>
         <div class="book-input">
           <label class="checkbox-container"

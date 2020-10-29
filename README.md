@@ -1,2 +1,2 @@
 # Library app
-This project gave me a better understanding on how to use Objects.
+This project helped better understand the usage of Objects.

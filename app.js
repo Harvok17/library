@@ -97,14 +97,24 @@ function addBooktoShelf(title,author,pages,read,index) {
     `<div class="book-card ${CHECKED}" data-key=${index}>
     <div class="hero"></div>
     <div class="book-info">
-      <p>Title: ${title}</p>
-      <p>Author: ${author}</p>
-      <p>Page count: ${pages}</p>
-      <label class="checkbox-container"
-        >Completed:
-        <input type="checkbox" ${CHECKED} data-job="checkbox"/>
-        <span class="checkmark"></span>
-      </label>
+        <div class="details">
+            <span class="heavy-text">Title:</span>
+            <p>${title}</p>
+        </div>
+        <div class="details">
+            <span class="heavy-text">Author:</span>
+            <p>${author}</p>
+        </div>
+        <div class="details">
+            <span class="heavy-text">Page count:</span>
+            <p>${pages}</p>
+        </div>
+        <div class="details">
+            <label class="checkbox-container">       <span class="heavy-text">Completed:</span>
+            <input type="checkbox" ${CHECKED} data-job="checkbox"/>
+            <span class="checkmark"></span>
+            </label>
+        </div>
     </div>
     <button class="delete" data-job="delete"><i class="fas fa-trash"></i></button>
   </div>`
