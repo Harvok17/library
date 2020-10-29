@@ -74,8 +74,9 @@ function displayBooks(){
 }
 
 function completeBook(element){
-    const index = element.parentNode.parentNode.parentNode.dataset.key
-    const bookInfo = element.parentNode.parentNode.parentNode
+    const index =
+      element.parentNode.parentNode.parentNode.parentNode.dataset.key;
+    const bookInfo = element.parentNode.parentNode.parentNode.parentNode;
 
     bookInfo.classList.toggle("checked")
     myLibrary[index].read = element.checked;
