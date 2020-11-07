@@ -205,7 +205,7 @@ h1 {
   margin-top: 20px;
   font-size: 1rem;
   font-weight: 500;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Poppins", sans-serif;
   text-align: left;
   padding: 0 10px;
 }
@@ -220,19 +220,20 @@ h1 {
 
 .heavy-text {
   font-weight: 900;
-  margin-right: 10px;
+  font-family: "Source Code Pro",monospace;
 }
 
 .details {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 /* The container */
 .checkbox-container {
   padding: 5px 0;
   display: block;
-  width: 150px;
+  width: 100%;
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
@@ -254,7 +255,7 @@ h1 {
 .checkmark {
   position: absolute;
   top: 2.5px;
-  left: 140px;
+  right: 90px;
   height: 25px;
   width: 25px;
   background-color: #9f9f9f;
